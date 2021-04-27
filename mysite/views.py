@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import random
+from mysite.models import Post
 
 def index(request):
+	posts = Post.objects.all()
 	myname = "Yuan"
 	data = [i for i in range(1,43)]
 	random.shuffle(data)

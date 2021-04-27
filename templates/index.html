@@ -40,7 +40,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="/admin/" tabindex="-1">管理後台</a>
+          <a class="nav-link" href="/admin/" tabindex="-1">管理後台</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -61,7 +61,9 @@
     {% endfor %}
   </tr>
 </table>
-
+{% for post in posts %}
+    {{ post.id }}:{{ post.title }}, {{ post.pub_date }}<br/>
+{% endfor %}
   </div>>
 
     <!-- Optional JavaScript; choose one of the two! -->
