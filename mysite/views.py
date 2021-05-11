@@ -12,4 +12,10 @@ def index(request):
 	special_number = data[6]
 	return render(request, 'index.html', locals())
 
+def show(request, id):
+	try:
+		torget = Post.objects.get(id=id)
+	except:
+		targer = None
+	return render(request, "showpost.html", locals())
 # Create your views here.
